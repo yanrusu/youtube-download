@@ -6,11 +6,13 @@ from moviepy.editor import *
 
 
 
+
 a = input()
 r = input('res:')
 ress = r+'p' #畫質
 print(ress)
 yt = YouTube(a)
+print(yt.streams.all())
 mb_ = yt.streams.filter(res=ress).first().filesize_mb #大小
 print("download",f'{mb_} MB')
 
